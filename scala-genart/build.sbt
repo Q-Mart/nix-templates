@@ -6,7 +6,7 @@ scalaVersion in ThisBuild := "2.12.15"
 
 classpathTypes ++= Set("jnilib")
 
-resolvers += MavenRepository("jogamp", "http://jogamp.org/deployment/maven")
+resolvers += MavenRepository("jogamp", "https://jogamp.org/deployment/maven")
 resolvers += MavenRepository("jitpack.io", "https://jitpack.io")
 
 libraryDependencies += "com.github.micycle1" % "processing-core-4" % "4.0.3"
