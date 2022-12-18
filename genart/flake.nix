@@ -5,14 +5,10 @@
 
   outputs = { self, nixpkgs, utils }: 
     utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [ (self: super: { jre = super.jdk11; }) ];
-        };
+      let pkgs = nixpkgs.legacyPackages.${system};
       in rec {
-        baseInputs = with pkgs; [ jdk11 scala sbt ];
-        shellInputs = with pkgs; [ scalafmt imagemagick ffmpeg ];
+        baseInputs = with pkgs; [ jdk gradle ];
+        shellInputs = with pkgs; [ imagemagick ffmpeg ];
 
 
         # ________HELLO_______
@@ -29,6 +25,10 @@
 
         devShell = pkgs.mkShell {
           buildInputs = baseInputs ++ shellInputs;
+          shellHook = ''
+            export JAVA_HOME=${pkgs.jdk}
+            PATH="${pkgs.jdk}/bin:$PATH"
+            '';
         };
       });
 }
