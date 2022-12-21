@@ -30,7 +30,6 @@ public class App extends PApplet {
             }
 
             noiseSeed(randomSeed);
-            // TODO: Make random singleton that uses seed
             size(1024, 768);
         } catch (ParseException e) {
             System.out.println(e.getMessage());
