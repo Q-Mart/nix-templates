@@ -3,9 +3,9 @@
 
   outputs = { self, ... }: {
     templates = {
-      scala-genart = {
-        path = ./scala-genart;
-        description = "Basic Scala project for creating generative art";
+      genart = {
+        path = ./genart;
+        description = "Basic Java project for creating generative art";
       };
     };
   };
