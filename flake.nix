@@ -14,7 +14,7 @@
 
           ## Get started
           Run cookiecutter to build out the template
-          '';
+        '';
       };
     };
   };
