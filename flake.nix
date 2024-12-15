@@ -7,10 +7,6 @@
         path = ./genart-java;
         description = "Basic Java project for creating generative art";
       };
-      genart-kotlin = {
-        path = ./genart-kotlin;
-        description = "Basic Kotlin project for creating generative art";
-      };
     };
   };
 }
