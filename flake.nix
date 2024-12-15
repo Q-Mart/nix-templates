@@ -7,7 +7,7 @@
         path = ./genart-java;
         description = "Basic Java project for creating generative art";
         welcomeText = ''
-          #Basic Java project for creating generative art
+          # Basic Java project for creating generative art
 
           This downloads cookiecutte, the JDK, and any required external libraries for Processing.
           The flake runs cookiecutter to generate a boilerplate project with
